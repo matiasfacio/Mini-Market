@@ -20,7 +20,6 @@ const DisplayCart = () => {
                 <div className = "cart_cantidad" style = {{textAlign: 'center'}}>Quantity</div>
                 <div className = "cart_price_total" style = {{textAlign: 'right'}}>Total</div>
             </div>
-            <hr/>
             <div>
                 {Cart.map((t, index) => {
 

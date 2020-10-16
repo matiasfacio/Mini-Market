@@ -22,21 +22,25 @@ function ListaProd() {
                         <h2>Products</h2>
                         <p>*our products with love*</p>
                     </div>
-                    <div className = "producto" style = {{marginBottom: 20}}>
+                    <div className = "producto container_list" style = {{marginBottom: 20}}>
                         <div className ="producto_id" style = {{fontSize: '1.2rem'}}>ID</div>
                         <div className ="producto_name" style = {{fontSize: '1.2rem'}}>NAME</div>
                         <div className ="producto_price" style = {{fontSize: '1.2rem'}}>PRICE</div>
                     </div>
-                    <br/>
                     <div className = "container_list">
                         {ProductsAvailable.map((t, index) => {
                         return <div key={index} className = 'producto'>
                                     <div className ="producto_id">{t.id})</div> 
                                     <div className ="producto_name">{t.name}</div>
                                     <div className = "producto_price">€ {(t.price.toFixed(2))}</div>
-                                    <button className = "producto_button_available" style = {{backgroundColor: !t.available ? 'red': 'green'}} onClick = {()=> dispatch({type: 'AVAILABLE', index})}>{t.available ? 'Deactivate': 'Activate'}</button>
+                                    <button className = "producto_button_available" style = {{
+                                        backgroundColor: !t.available ? 'red': 'green'}} 
+                                        onClick = {()=> dispatch({type: 'AVAILABLE', index})}>
+                                        {t.available ? 'Deactivate': 'Activate'}
+                                    </button>
+
                                     {t.available ? <button  className = "producto_button_add" onClick = {()=> dispatch({type: 'ADD_CART', index})}>ADD</button> : ''}
-                                    <button className = "producto_display_info" style = {{textDecoration: t.display ? 'line-through': 'none', border: t.display ? '2px red solid': 'none'}}onClick = {() => {dispatch({type: 'CLEAR_INFO'}); dispatch({type: 'INFO_ITEM', index})}}>INFO</button>
+                                    <button className = "producto_display_info" style = {{border: t.display ? '2px red solid': 'none'}}onClick = {() => {dispatch({type: 'CLEAR_INFO'}); dispatch({type: 'INFO_ITEM', index})}}>INFO</button>
                                 </div>
                         })}
                     </div>
