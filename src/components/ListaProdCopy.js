@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../context/GlobalContext'
 import '../App.css'
 import DisplayCart from './DisplayCart'
@@ -11,11 +11,24 @@ function ListaProd() {
     
     const [newItem, setNewItem] = useState({name: '', id: ProductsAvailable.length+2, stock: 0, description: '', price: 0, available: false})
 
+    const [menuClick,setmenuClick] = useState(false)
+
+
+
+    useEffect(()=> {
+        return
+    }, [menuClick])
     
 
     return (
         <div>
             <div className ="title"><h1>Mini Market</h1></div>
+            <nav>
+                <ul>
+                        <li onClick = { () => setmenuClick(!menuClick)}>{!menuClick ? 'Show Cart':'Hide Cart'}</li>
+                            <p style = {{color:'red'}}>({Cart.length})</p>
+                </ul>
+            </nav>
             <div className = "_listsDisplay">  
                 <div className = "_listaProducts">
                     <div className = "title_list">
@@ -46,9 +59,10 @@ function ListaProd() {
                     </div>
                     <Form />
                 </div>
+                
                 <div className = "container_right">
-                    <DisplayCart />
-                   <ProductInformation />
+                    {menuClick ? <DisplayCart />: ''}
+                    <ProductInformation />
                 </div>
             </div>
         </div>

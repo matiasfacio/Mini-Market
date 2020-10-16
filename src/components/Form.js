@@ -4,7 +4,7 @@ import { GlobalContext } from '../context/GlobalContext'
 const Form = () => {
 
     const { ProductsAvailable, dispatch} = useContext(GlobalContext)
-    const [newItem, setNewItem] = useState({name: '', id: ProductsAvailable.length+2, stock: 0, description: '', price: 0, available: false})
+    const [newItem, setNewItem] = useState({name: '', id: ProductsAvailable.length+1, stock: 0, description: '', price: 0, available: false})
 
 
     return (       
@@ -27,7 +27,7 @@ const Form = () => {
             <label>
                 Id:
             </label>
-            <input type = "number"value={ProductsAvailable.length +2} onChange={e => setNewItem({...newItem,id: ProductsAvailable.length +2})}/><br/>
+            <input type = "text"value={ProductsAvailable.length +1} onChange={e => setNewItem({...newItem,id: ProductsAvailable.length +2})}/><br/>
             <label>
                 Stock:
             </label>

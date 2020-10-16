@@ -2,6 +2,7 @@
   --bg-color: #282c34;
   --bg-color-lightmode: white;
   --text-color: white;
+  --bg-nav: #1a1d22;
 }
 
 * {
@@ -34,6 +35,28 @@ h1 {
 
 h2 {
   color: var(--text-color)
+}
+
+nav ul {
+  list-style: none;
+  cursor: pointer; 
+  text-align: right;
+  padding-right: 2em;
+  padding-top: 1em;
+  display:flex;
+}
+
+nav ul li {
+  font-size: 1.2rem;
+  margin-left: 2em;
+  padding-bottom: 10px;
+  display: inline-block
+}
+
+nav ul li:hover{
+  background-color: var(--bg-nav);
+  border-radius: 10px;
+  padding: 5px
 }
 
 button {
