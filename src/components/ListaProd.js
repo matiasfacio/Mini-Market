@@ -97,18 +97,24 @@ function ListaProd() {
                                 <div className = "cart_id">Item</div>
                                 <div className = "cart_name" style = {{textAlign: 'center'}}>Name</div>
                                 <div className = "cart_price">Price</div>
+                                <div className = "cart_cantidad" style = {{textAlign: 'center'}}>Quantity</div>
+                                <div className = "cart_price_total" style = {{textAlign: 'right'}}>Total</div>
                             </div>
                             <hr/>
                             <div>
                                 {Cart.map((t, index) => {
-                                    return <div key = {index} className = "displayCart">
+
+                                    return t.quantity !== 0 ? <div key = {index} className = "displayCart">
                                             <div className = "cart_id">{t.id} </div>
                                             <div className = "cart_name">{t.name} </div>
-                                            <div className = "cart_price">€ {t.price}.- </div>
+                                            <div className = "cart_price">€ {t.price}</div>
+                                            <div className = "cart_cantidad">{t.quantity}<button onClick = { ()=> dispatch({type: 'UPDATE_CART_INC', index})}>+</button><button onClick = { ()=> dispatch({type: 'UPDATE_CART_DEC', index})}>-</button></div>
+                                            <div className = "cart_price_total">€ {t.price * t.quantity}.- </div>
                                             <div className = "cart_button_del">
                                                 <button style = {{padding: 5}}onClick = {()=> dispatch({type:'DEL_CART', t, index })}>Del</button>
                                             </div>
                                         </div>
+                                    : ''
                                 })}
                             </div>
                         </div>

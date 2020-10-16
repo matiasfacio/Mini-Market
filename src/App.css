@@ -50,7 +50,7 @@ button {
   flex-direction: column;
   width: 50vw;
   justify-content: space-around;
-  align-items: left;
+  align-items: flex-start;
   margin-left: 50px;
   margin-top: 20px;
 }
@@ -178,7 +178,7 @@ label {
 
 .displayCart {
   display: grid;
-  grid-template-columns: 0.4fr 1fr 1fr 0.5fr;
+  grid-template-columns: 0.4fr 1fr 0.5fr 1fr 0.5fr 0.5fr;
   grid-template-rows: auto;
   margin-top: 5px;
   background-color: #353b46;
@@ -187,12 +187,12 @@ label {
 }
 
 .cart_button_del {
-  grid-column: 4 / 5;
+  grid-column:  6 / 7;
   text-align: right;
   padding: 3px
 }
 
-.cart_id, .cart_name, .cart_price {
+.cart_id, .cart_name, .cart_price, .cart_cantidad, .cart_price_total {
   font-size: 1.2rem
 }
 
@@ -204,11 +204,22 @@ label {
 
 .cart_name {
   grid-column: 2 / 3;
+  padding-left: 20px;
 }
 
 .cart_price {
   grid-column: 3 / 4;
   text-align: right;
+}
+
+.cart_cantidad {
+  grid-column: 4 / 5;
+  text-align: center
+}
+
+.cart_price_total {
+  grid-column: 5 / 6;
+  text-align: right
 }
 
 .cart_subtotal, .cart_vat, .cart_total {

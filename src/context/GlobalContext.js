@@ -21,16 +21,37 @@ const reducerProducts = (state, action) => {
             })}
 
         case 'ADD_CART':
+
             return {
-                    ...state, 
-                    Cart: [...state.Cart, state.ProductsAvailable[action.index]],
-                    CountCart: state.CountCart + state.ProductsAvailable[action.index].price
+                ...state,
+                Cart: [...state.Cart, {...state.ProductsAvailable[action.index], quantity: 1 }],
+                CountCart: state.CountCart + state.ProductsAvailable[action.index].price
             }
+        
+        case 'UPDATE_CART_INC': 
+            return {
+                ...state,
+                Cart: state.Cart.map((t, index) => {
+                    return index === action.index ? {...t, quantity : t.quantity+1} : t
+                }),
+                CountCart: state.CountCart + state.Cart[action.index].price
+            }
+        
+        case 'UPDATE_CART_DEC': 
+            return {
+                ...state,
+                Cart: state.Cart.map((t, index) => {
+                    return index === action.index ? {...t, quantity : t.quantity-1} : t
+                }),
+                CountCart: state.CountCart - state.Cart[action.index].price
+            }
+                  
         
         case 'DEL_CART':               
             return {
                     ...state, 
-                    CountCart: state.CountCart - state.ProductsAvailable[state.ProductsAvailable.indexOf(action.t)].price,
+                    CountCart: state.CountCart - state.Cart[action.index].price,
+                    // CountCart: state.CountCart - state.ProductsAvailable[state.ProductsAvailable.indexOf(action.t)].price,
                     Cart: state.Cart.filter((t,index) => { return index !== action.index})
                 }
         
@@ -68,7 +89,8 @@ const GlobalContextFunction = (props) => {
         return {...t, available: false, display: false}
     }), Cart: [], CountCart: 0})
 
-    console.log(ProductsAvailable, Cart)
+    console.log(ProductsAvailable)
+    console.log(Cart)
 
     return (
         <GlobalContext.Provider value = {{ProductsAvailable, Cart, CountCart, dispatch}}>
