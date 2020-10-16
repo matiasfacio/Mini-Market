@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ListaProd from './components/ListaProd';
+import ListaProdCopy from './components/ListaProdCopy';
 // import ListaProducts from './components/ListaProducts'
 import GlobalContextFunction from './context/GlobalContext'
 // import { GlobalContext } from './context/GlobalContext'
@@ -10,7 +10,7 @@ export default function App() {
     <div className="App-main">
 
       <GlobalContextFunction>
-        <ListaProd />
+        <ListaProdCopy />
       </GlobalContextFunction>
 
     </div>

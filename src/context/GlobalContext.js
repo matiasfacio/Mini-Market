@@ -50,7 +50,7 @@ const reducerProducts = (state, action) => {
         case 'DEL_CART':               
             return {
                     ...state, 
-                    CountCart: state.CountCart - state.Cart[action.index].price,
+                    CountCart: state.CountCart - state.Cart[action.index].price * state.Cart[action.index].quantity,
                     // CountCart: state.CountCart - state.ProductsAvailable[state.ProductsAvailable.indexOf(action.t)].price,
                     Cart: state.Cart.filter((t,index) => { return index !== action.index})
                 }
