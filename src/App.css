@@ -1,3 +1,9 @@
+:root {
+  --bg-color: #282c34;
+  --bg-color-lightmode: white;
+  --text-color: white;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +11,7 @@
 }
 
 html {
-  background-color: #282c34;
+  background-color: var(--bg-color);
 
 }
 .App-main {
@@ -14,11 +20,20 @@ html {
   flex-direction: column;
   height: 100vh;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--text-color)
 }
 
 p {
-  font-size: 1rem
+  font-size: 1rem;
+  color: var(--text-color)
+}
+
+h1 {
+  color: var(--text-color)
+}
+
+h2 {
+  color: var(--text-color)
 }
 
 button {
@@ -29,7 +44,8 @@ button {
 
 .title {
   text-align: center;
-  width: 100vw;
+  width: calc(100vw - 2em);
+  margin: 0 auto;
   padding-top: 30px;
   border-bottom: 3px white solid;
   padding-bottom: 30px;
@@ -41,8 +57,9 @@ button {
 ._listsDisplay {
   display: flex;
   justify-content: space-around;
-  width: 100vw;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  width: calc(100vw - 2em);
+  margin: 20px auto
 }
 
 .container_right {
@@ -54,11 +71,9 @@ button {
 ._listaProducts {
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 55vw;
   justify-content: space-around;
   align-items: flex-start;
-  margin-left: 50px;
-  margin-top: 20px;
 }
 
 .title_list {
@@ -80,7 +95,7 @@ button {
   grid-template-rows: auto;
   justify-content: start; 
   align-items:start;
-  width: 40vw
+  width: 50vw
 }
 
 
