@@ -6,18 +6,18 @@ import ProductInformation from "./ProductInformation";
 import Form from "./Form";
 
 function ListaProd() {
-  const { ProductsAvailable, Cart, CountCart, dispatch } = useContext(
+  const { ProductsAvailable, Cart, dispatch } = useContext(
     GlobalContext
   );
 
-  const [newItem, setNewItem] = useState({
-    name: "",
-    id: ProductsAvailable.length + 2,
-    stock: 0,
-    description: "",
-    price: 0,
-    available: false,
-  });
+//   const [newItem, setNewItem] = useState({
+//     name: "",
+//     id: ProductsAvailable.length + 2,
+//     stock: 0,
+//     description: "",
+//     price: 0,
+//     available: false,
+//   });
 
   const [menuClick, setmenuClick] = useState(false);
 
