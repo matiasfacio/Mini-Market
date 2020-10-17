@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 
 const DisplayCart = () => {
-  const { ProductsAvailable, Cart, CountCart, dispatch } = useContext(
+  const { Cart, CountCart, dispatch } = useContext(
     GlobalContext
   );
 
