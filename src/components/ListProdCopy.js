@@ -5,19 +5,10 @@ import DisplayCart from "./DisplayCart";
 import ProductInformation from "./ProductInformation";
 import Form from "./Form";
 
-function ListaProd() {
+function ListaProdCopy() {
   const { ProductsAvailable, Cart, dispatch } = useContext(
     GlobalContext
   );
-
-//   const [newItem, setNewItem] = useState({
-//     name: "",
-//     id: ProductsAvailable.length + 2,
-//     stock: 0,
-//     description: "",
-//     price: 0,
-//     available: false,
-//   });
 
   const [menuClick, setmenuClick] = useState(false);
 
@@ -39,31 +30,31 @@ function ListaProd() {
         </ul>
       </nav>
       <div className="_listsDisplay">
-        <div className="_listaProducts">
+        <div className="_listProducts">
           <div className="title_list">
             <h2>Products</h2>
             <p>*our I products with love*</p>
           </div>
-          <div className="producto container_list" style={{ marginBottom: 20 }}>
-            <div className="producto_id" style={{ fontSize: "1.2rem" }}>
+          <div className="product container_list" style={{ marginBottom: 20 }}>
+            <div className="product_id" style={{ fontSize: "1.2rem" }}>
               ID
             </div>
-            <div className="producto_name" style={{ fontSize: "1.2rem" }}>
+            <div className="product_name" style={{ fontSize: "1.2rem" }}>
               NAME
             </div>
-            <div className="producto_price" style={{ fontSize: "1.2rem" }}>
+            <div className="product_price" style={{ fontSize: "1.2rem" }}>
               PRICE
             </div>
           </div>
           <div className="container_list">
             {ProductsAvailable.map((t, index) => {
               return (
-                <div key={index} className="producto">
-                  <div className="producto_id">{t.id})</div>
-                  <div className="producto_name">{t.name}</div>
-                  <div className="producto_price">€ {t.price.toFixed(2)}</div>
+                <div key={index} className="product">
+                  <div className="product_id">{t.id})</div>
+                  <div className="product_name">{t.name}</div>
+                  <div className="product_price">€ {t.price.toFixed(2)}</div>
                   <button
-                    className="producto_button_available"
+                    className="product_button_available"
                     style={{
                       backgroundColor: !t.available ? "red" : "green",
                     }}
@@ -74,7 +65,7 @@ function ListaProd() {
 
                   {t.available ? (
                     <button
-                      className="producto_button_add"
+                      className="product_button_add"
                       onClick={() => dispatch({ type: "ADD_CART", index })}
                     >
                       ADD
@@ -83,7 +74,7 @@ function ListaProd() {
                     ""
                   )}
                   <button
-                    className="producto_display_info"
+                    className="product_display_info"
                     style={{ border: t.display ? "2px red solid" : "none" }}
                     onMouseOver={() => {
                       dispatch({ type: "CLEAR_INFO" });
@@ -110,4 +101,4 @@ function ListaProd() {
   );
 }
 
-export default ListaProd;
+export default ListaProdCopy;
