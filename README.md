@@ -1,6 +1,10 @@
 It is a Shopping Cart that includes a list of products, the posibility to add new products.
 It doesn't check out, it is just to show the functioning of the cart.
 
+here you can see the app working: https://mini-market.netlify.app/
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
