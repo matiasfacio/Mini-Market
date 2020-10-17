@@ -103,6 +103,13 @@ button {
   margin-bottom: 20px;
 }
 
+.secondPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50vw;
+}
+
 .container_list {
   background-color: #353b46;
   padding: 20px 0;
@@ -154,13 +161,18 @@ button {
   margin-left: 10px;
 }
 
+.producto_button_add:active {
+  color: white;
+  background-color: black;
+}
+
 .producto_display_info {
   grid-column: 6 / 7;
   width: 50px;
 }
 
 .product_information {
-  margin-top: 100px;
+  margin-top: 50px;
   border-top: 1px white solid;
   background-color: #353b46;
   padding: 20px 20px;
@@ -188,7 +200,7 @@ button {
   display: flex;
   justify-content: stretch;
   align-items: center;
-  margin-left: 50px;
+  /* padding-left: 1em; */
   background-color: #353b46;
   padding: 20px 20px;
   box-shadow: 1px 1px 20px black;

@@ -57,12 +57,14 @@ function ListaProd() {
                                 </div>
                         })}
                     </div>
-                    <Form />
+                    <div className ="secondPage"> 
+                        <Form />
+                        <ProductInformation />
+                    </div>
                 </div>
                 
                 <div className = "container_right">
-                    {menuClick ? <DisplayCart />: ''}
-                    <ProductInformation />
+                    {menuClick ? <DisplayCart />: ''}                   
                 </div>
             </div>
         </div>
