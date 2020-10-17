@@ -53,7 +53,7 @@ function ListaProd() {
                                     </button>
 
                                     {t.available ? <button  className = "producto_button_add" onClick = {()=> dispatch({type: 'ADD_CART', index})}>ADD</button> : ''}
-                                    <button className = "producto_display_info" style = {{border: t.display ? '2px red solid': 'none'}}onClick = {() => {dispatch({type: 'CLEAR_INFO'}); dispatch({type: 'INFO_ITEM', index})}}>INFO</button>
+                                    <button className = "producto_display_info" style = {{border: t.display ? '2px red solid': 'none'}}onMouseOver = {() => {dispatch({type: 'CLEAR_INFO'}); dispatch({type: 'INFO_ITEM', index})}}>INFO</button>
                                 </div>
                         })}
                     </div>
