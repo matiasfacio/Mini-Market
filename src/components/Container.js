@@ -8,9 +8,9 @@ import styled from "styled-components";
 import Listing from "./Listing";
 
 function ListaProd() {
-  const {Cart } = useContext(GlobalContext);
+  const { Cart } = useContext(GlobalContext);
 
-  const [menuClick, setmenuClick] = useState(false);
+  const [menuClick, setmenuClick] = useState(true);
 
   useEffect(() => {
     return;
@@ -81,6 +81,7 @@ export const Nav = styled.div`
     padding-right: 2em;
     padding-top: 1em;
     display: flex;
+    justify-content: flex-end
   }
 
   ul li {
