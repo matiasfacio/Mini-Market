@@ -108,6 +108,6 @@ export const SecondPage = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
-  justify-content: space-between;
-  width: 50vw;
+  justify-content: space-around;
+  width: 100vw;
 `;
