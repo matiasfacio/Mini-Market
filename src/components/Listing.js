@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 function Listing(){
 
-    const { ProductsAvailable, Cart, dispatch } = useContext(GlobalContext);
+    const { ProductsAvailable, dispatch } = useContext(GlobalContext);
 
     return(
         <ListProducts>
