@@ -65,9 +65,9 @@ export const Title = styled.div`
   text-align: center;
   width: calc(100vw - 2em);
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 2em;
   border-bottom: 3px white solid;
-  padding-bottom: 30px;
+  padding-bottom: 2em;
   background-color: #1e2127;
   border-radius: 10px;
   box-shadow: 1px 1px 20px black;
@@ -87,14 +87,13 @@ export const Nav = styled.div`
   ul li {
     font-size: 1.2rem;
     margin-left: 2em;
-    padding-bottom: 10px;
+    padding: 0.5em 1em;
     display: inline-block;
   }
 
   ul li:hover {
     background-color: var(--bg-nav);
     border-radius: 10px;
-    padding: 5px;
   }
 `;
 

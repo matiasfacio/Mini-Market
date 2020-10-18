@@ -101,11 +101,10 @@ export const FormCSS = styled.form`
     display: flex;
     justify-content: stretch;
     align-items: center;
-    /* padding-left: 1em; */
     background-color: #353b46;
-    padding: 20px 20px;
+    padding: 1.5em 1em;
     box-shadow: 1px 1px 20px black;
-    margin-bottom: 30px;
+    margin-bottom: 2em;
     border-top: 1px white solid;
     border-radius: 10px;
   }

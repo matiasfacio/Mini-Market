@@ -71,7 +71,7 @@ function Listing() {
 export default Listing;
 
 export const TitleButton = styled.div`
-  padding-bottom: 10px;
+  padding-bottom: 0.8em;
 `;
 
 export const ListProducts = styled.div`
@@ -89,12 +89,12 @@ export const Product = styled.div`
   justify-content: start;
   align-items: start;
   width: 50vw;
-  margin-bottom: 10px;
+  margin-bottom: 0.4em;
 `;
 
 export const ContainerList = styled.div`
   background-color: #353b46;
-  padding: 20px 0;
+  padding: 1.5em 0;
   box-shadow: 1px 1px 20px black;
   border-radius: 10px;
   border-top: 1px white solid;
@@ -105,5 +105,5 @@ export const ListDisplay = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   width: calc(100vw - 2em);
-  margin: 20px auto;
+  margin: 1.5em auto;
 `;
