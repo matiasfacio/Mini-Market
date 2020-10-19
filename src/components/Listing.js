@@ -52,13 +52,13 @@ function Listing() {
               )}
               <button
                 className="product_display_info"
-                style={{ border: t.display ? "2px red solid" : "none" }}
+                style={{ border: t.display ? "2px red solid" : "none", color: "red", fontSize: "1rem" }}
                 onClick={() => {
                   dispatch({ type: "CLEAR_INFO" });
                   dispatch({ type: "INFO_ITEM", index });
                 }}
               >
-                INFO
+                i
               </button>
             </Product>
           );

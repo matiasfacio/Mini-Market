@@ -39,7 +39,7 @@
 
 .product_button_add {
   grid-column: 5 / 6;
-  width: 50px;
+  width: 40px;
   margin-left: 10px;
 }
 
@@ -50,7 +50,7 @@
 
 .product_display_info {
   grid-column: 6 / 7;
-  width: 50px;
+  width: 30px;
 }
 
 .product_information {
