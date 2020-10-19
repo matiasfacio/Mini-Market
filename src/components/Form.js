@@ -99,6 +99,7 @@ export const FormCSS = styled.form`
 
   .flex_form {
     display: flex;
+    width: calc(100vw - 2em);
     justify-content: stretch;
     align-items: center;
     background-color: #353b46;

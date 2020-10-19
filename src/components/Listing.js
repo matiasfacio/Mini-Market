@@ -53,7 +53,7 @@ function Listing() {
               <button
                 className="product_display_info"
                 style={{ border: t.display ? "2px red solid" : "none" }}
-                onMouseOver={() => {
+                onClick={() => {
                   dispatch({ type: "CLEAR_INFO" });
                   dispatch({ type: "INFO_ITEM", index });
                 }}
@@ -77,9 +77,12 @@ export const TitleButton = styled.div`
 export const ListProducts = styled.div`
   display: flex;
   flex-direction: column;
-  width: 55vw;
+  width: 100vw;
   justify-content: space-around;
   align-items: flex-start;
+  @media (min-width: 1024px) {
+    width: 50vw
+  }
 `;
 
 export const Product = styled.div`
@@ -88,8 +91,11 @@ export const Product = styled.div`
   grid-template-rows: auto;
   justify-content: start;
   align-items: start;
-  width: 50vw;
+  width: calc(100vw - 2em);
   margin-bottom: 0.4em;
+    @media (min-width: 1024px) {
+      width: 50vw
+    }
 `;
 
 export const ContainerList = styled.div`

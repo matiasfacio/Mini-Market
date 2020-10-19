@@ -7,7 +7,7 @@ const DisplayCart = () => {
 
   return (
     <div className="cart">
-      <div style={{ marginBottom: 20 }}>
+      <div style={{ marginBottom: 20, marginTop: 40 }}>
         <h2>Cart</h2>
       </div>
       <div className="button_empty_cart">
@@ -98,13 +98,17 @@ export default DisplayCart;
 export const CartCSS = styled.div`
   .displayCart {
     display: grid;
+    width: calc(100vw - 2em);
     grid-template-columns: 0.4fr 1fr 0.5fr 1fr 0.5fr 0.5fr;
     grid-template-rows: auto;
-    margin-top: 5px;
+    margin-top: 1em;
     background-color: #353b46;
     padding: 10px 0;
     box-shadow: 1px 1px 20px black;
     border-radius: 10px;
     border-top: 1px white solid;
+     @media (min-width: 1024px) {
+      width: 80vw
+    }
   }
 `;

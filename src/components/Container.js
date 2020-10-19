@@ -32,11 +32,12 @@ function ListaProd() {
 
       <ListDisplay>
         <Listing />
+        <ProductInformation />
         <ContainerRight>{menuClick ? <DisplayCart /> : ""}</ContainerRight>
 
         <SecondPage>
+          
           <Form />
-          <ProductInformation />
         </SecondPage>
       </ListDisplay>
     </div>
@@ -81,7 +82,7 @@ export const Nav = styled.div`
     padding-right: 2em;
     padding-top: 1em;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
   }
 
   ul li {
@@ -100,13 +101,17 @@ export const Nav = styled.div`
 export const ContainerRight = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: calc(100vw - 2em);
+  @media (min-width: 1024px) {
+    width: 80vw
+  }
 `;
 
 export const SecondPage = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap-reverse;
   justify-content: space-around;
   width: 100vw;
+  
 `;
