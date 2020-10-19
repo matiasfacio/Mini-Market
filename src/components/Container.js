@@ -34,11 +34,7 @@ function ListaProd() {
         <Listing />
         <ProductInformation />
         <ContainerRight>{menuClick ? <DisplayCart /> : ""}</ContainerRight>
-
-        <SecondPage>
-          
-          <Form />
-        </SecondPage>
+        <Form />
       </ListDisplay>
     </div>
   );
@@ -103,15 +99,6 @@ export const ContainerRight = styled.div`
   flex-direction: column;
   width: calc(100vw - 2em);
   @media (min-width: 1024px) {
-    width: 80vw
+    width: 80vw;
   }
-`;
-
-export const SecondPage = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap-reverse;
-  justify-content: space-around;
-  width: 100vw;
-  
 `;
